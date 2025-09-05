@@ -27,12 +27,16 @@ for i in range(6):
     starty+=100+15
     endy+=100+15
     
-def on_button_click():
-    pass
+def click(b):
+    print('clicked');
     
-button = tk.Button(root, text="Click Me", command=on_button_click)
-#canvas.create_window()
-button.place(x=150, y=100, width=100, height=50)
+
+xs=20
+for i in range(7):
+    button = tk.Button(root, text="column "+str(i+1), command=lambda:click(button))
+    button.place(x = xs, y=20, width=100, height=50)
+    xs+=100+15
+    
 
 #canvas.itemconfigure("1", fill="red")
 turn = True # red starts
